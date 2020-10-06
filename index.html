@@ -11,13 +11,15 @@
     <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js" integrity="sha384-B4gt1jrGC7Jh4AgTPSdUtOBvfO8shuf57BaghqFfPlYxofvL8/KUEfYiJOMMV+rV" crossorigin="anonymous"></script>
     <!--Script Nuestro-->
     <script src="js/script.js"></script>
+    <!--CSS Nuestro-->
+    <link rel="stylesheet" href="css/style.css">
     <title>Ejemplos con RegExp</title>
 </head>
 <body>
     <div class="container">
         <h1 class="text-center responsive">Uso de las Expresiones Regulares en JavaScript</h1>
         <div class="row">
-            <div class="col-12 col-md-4">
+            <div class="col-12 col-md-4" id="Contenedores">
                 <form name="frm_palabras">
                     <div class="form-group">
                         <label for="TextArea">Buscador de letra "e"</label>
@@ -39,10 +41,10 @@
                             </div>
                         </div>
                         <div class="col-6">
-                            <div class="form-group">
+                            <div id="Contenedor_Botones" class="form-group">
                                 <button type="button" id="BotonPalabras" class="btn btn-primary">Enviar</button>
                             </div>
-                            <div class="form-group">
+                            <div id="Contenedor_Botones" class="form-group">
                                 <button class="btn btn-primary" type="reset">Limpiar</button>
                             </div>
                         </div>
@@ -50,7 +52,7 @@
                     <p id="ImpresorTexto"></p>
                 </form>
             </div>
-            <div class="col-12 col-md-4">
+            <div class="col-12 col-md-4" id="Contenedores">
                 <form name="frm_char">
                     <div class="form-group">
                         <label for="TextArea">Buscador de la palabra "Botella"</label>
@@ -72,10 +74,10 @@
                             </div>
                         </div>
                         <div class="col-6">
-                            <div class="form-group">
+                            <div id="Contenedor_Botones" class="form-group">
                                 <button type="button" id="BotonChar" class="btn btn-primary">Enviar</button>
                             </div>
-                            <div class="form-group">
+                            <div id="Contenedor_Botones" class="form-group">
                                 <button class="btn btn-primary" type="reset">Limpiar</button>
                             </div>
                         </div>
@@ -83,7 +85,7 @@
                     <p id="ImpresorChar"></p>
                 </form>
             </div>
-            <div class="col-12 col-md-4">
+            <div class="col-12 col-md-4" id="Contenedores">
                 <form name="frm_letra">
                     <div class="form-group">
                         <label for="TextArea">Buscador de letras que hay en la palabra "murcielago"</label>
@@ -105,10 +107,10 @@
                             </div>
                         </div>
                         <div class="col-6">
-                            <div class="form-group">
+                            <div id="Contenedor_Botones" class="form-group">
                                 <button type="button" id="BotonLetra" class="btn btn-primary">Enviar</button>
                             </div>
-                            <div class="form-group">
+                            <div id="Contenedor_Botones" class="form-group">
                                 <button class="btn btn-primary" type="reset">Limpiar</button>
                             </div>
                         </div>
@@ -116,7 +118,7 @@
                     <p id="ImpresorLetra"></p>
                 </form>
             </div>
-            <div class="col-12 col-md-4">
+            <div class="col-12 col-md-4" id="Contenedores">
                 <form name="frm_Num">
                     <div class="form-group">
                         <label for="TextArea">Encuentra cualquier digito entre 0 a 5</label>
@@ -138,10 +140,10 @@
                             </div>
                         </div>
                         <div class="col-6">
-                            <div class="form-group">
+                            <div id="Contenedor_Botones" class="form-group">
                                 <button type="button" id="BotonNum" class="btn btn-primary">Enviar</button>
                             </div>
-                            <div class="form-group">
+                            <div id="Contenedor_Botones" class="form-group">
                                 <button class="btn btn-primary" type="reset">Limpiar</button>
                             </div>
                         </div>
@@ -149,7 +151,7 @@
                     <p id="ImpresorNum"></p>
                 </form>
             </div>
-            <div class="col-12 col-md-4">
+            <div class="col-12 col-md-4" id="Contenedores">
                 <form name="frm_NoNum">
                     <div class="form-group">
                         <label for="TextArea">No se admite ningún número entre 2 al 6</label>
@@ -171,10 +173,10 @@
                             </div>
                         </div>
                         <div class="col-6">
-                            <div class="form-group">
+                            <div id="Contenedor_Botones" class="form-group">
                                 <button type="button" id="BotonNoNum" class="btn btn-primary">Enviar</button>
                             </div>
-                            <div class="form-group">
+                            <div id="Contenedor_Botones" class="form-group">
                                 <button class="btn btn-primary" type="reset">Limpiar</button>
                             </div>
                         </div>
@@ -182,7 +184,7 @@
                     <p id="ImpresorNoNum"></p>
                 </form>
             </div>
-            <div class="col-12 col-md-4">
+            <div class="col-12 col-md-4" id="Contenedores">
                 <form name="frm_Alter">
                     <div class="form-group">
                         <label for="TextArea">Alternancia entre la palabra "pescado" y "carne"</label>
@@ -204,10 +206,10 @@
                             </div>
                         </div>
                         <div class="col-6">
-                            <div class="form-group">
+                            <div id="Contenedor_Botones" class="form-group">
                                 <button type="button" id="BotonAlter" class="btn btn-primary">Enviar</button>
                             </div>
-                            <div class="form-group">
+                            <div id="Contenedor_Botones" class="form-group">
                                 <button class="btn btn-primary" type="reset">Limpiar</button>
                             </div>
                         </div>
@@ -215,7 +217,6 @@
                     <p id="ImpresorAlter"></p>
                 </form>
             </div>
-            <div class="col-12 col-md-4"></div>
         </div>
     </div>
 </body>
