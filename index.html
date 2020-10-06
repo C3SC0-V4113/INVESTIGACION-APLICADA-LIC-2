@@ -1,0 +1,222 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- CSS only -->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" integrity="sha384-JcKb8q3iqJ61gNV9KGb8thSsNjpSL0n8PARn9HuZOnIxN0hoP+VmmDGMN5t9UJ0Z" crossorigin="anonymous">
+    <!-- JS, Popper.js, and jQuery -->
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.1/dist/umd/popper.min.js" integrity="sha384-9/reFTGAW83EW2RDu2S0VKaIzap3H66lZH81PoYlFhbGU+6BZp6G7niu735Sk7lN" crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js" integrity="sha384-B4gt1jrGC7Jh4AgTPSdUtOBvfO8shuf57BaghqFfPlYxofvL8/KUEfYiJOMMV+rV" crossorigin="anonymous"></script>
+    <!--Script Nuestro-->
+    <script src="js/script.js"></script>
+    <title>Ejemplos con RegExp</title>
+</head>
+<body>
+    <div class="container">
+        <h1 class="text-center responsive">Uso de las Expresiones Regulares en JavaScript</h1>
+        <div class="row">
+            <div class="col-12 col-md-4">
+                <form name="frm_palabras">
+                    <div class="form-group">
+                        <label for="TextArea">Buscador de letra "e"</label>
+                        <textarea class="form-control" id="TextAreaPalabras" rows="3"></textarea>
+                    </div>
+                    <div class="row">
+                        <div class="col-6">
+                            <div class="form-check">
+                                <input class="form-check-input" type="radio" name="RadiosTexto" id="RadiosTexto" value="Global" checked>
+                                <label class="form-check-label" for="gridRadios1">Global</label>
+                              </div>
+                            <div class="form-check">
+                                <input class="form-check-input" type="radio" name="RadiosTexto" id="RadiosTexto" value="Insensitivo">
+                                <label class="form-check-label" for="gridRadios2">Insensitivo</label>
+                            </div>
+                            <div class="form-check">
+                                <input class="form-check-input" type="radio" name="RadiosTexto" id="RadiosTexto" value="Multilinea" >
+                                <label class="form-check-label" for="gridRadios3">Multilinea</label>
+                            </div>
+                        </div>
+                        <div class="col-6">
+                            <div class="form-group">
+                                <button type="button" id="BotonPalabras" class="btn btn-primary">Enviar</button>
+                            </div>
+                            <div class="form-group">
+                                <button class="btn btn-primary" type="reset">Limpiar</button>
+                            </div>
+                        </div>
+                    </div>
+                    <p id="ImpresorTexto"></p>
+                </form>
+            </div>
+            <div class="col-12 col-md-4">
+                <form name="frm_char">
+                    <div class="form-group">
+                        <label for="TextArea">Buscador de la palabra "Botella"</label>
+                        <textarea class="form-control" id="TextAreaChar" rows="3"></textarea>
+                    </div>
+                    <div class="row">
+                        <div class="col-6">
+                            <div class="form-check">
+                                <input class="form-check-input" type="radio" name="RadiosChar" id="RadiosChar" value="Global" checked>
+                                <label class="form-check-label" for="gridRadios1">Global</label>
+                              </div>
+                            <div class="form-check">
+                                <input class="form-check-input" type="radio" name="RadiosChar" id="RadiosChar" value="Insensitivo">
+                                <label class="form-check-label" for="gridRadios2">Insensitivo</label>
+                            </div>
+                            <div class="form-check">
+                                <input class="form-check-input" type="radio" name="RadiosChar" id="RadiosChar" value="Multilinea" >
+                                <label class="form-check-label" for="gridRadios3">Multilinea</label>
+                            </div>
+                        </div>
+                        <div class="col-6">
+                            <div class="form-group">
+                                <button type="button" id="BotonChar" class="btn btn-primary">Enviar</button>
+                            </div>
+                            <div class="form-group">
+                                <button class="btn btn-primary" type="reset">Limpiar</button>
+                            </div>
+                        </div>
+                    </div>
+                    <p id="ImpresorChar"></p>
+                </form>
+            </div>
+            <div class="col-12 col-md-4">
+                <form name="frm_letra">
+                    <div class="form-group">
+                        <label for="TextArea">Buscador de letras que hay en la palabra "murcielago"</label>
+                        <textarea class="form-control" id="TextAreaLetra" rows="3"></textarea>
+                    </div>
+                    <div class="row">
+                        <div class="col-6">
+                            <div class="form-check">
+                                <input class="form-check-input" type="radio" name="RadiosLetra" id="RadiosLetra" value="Global" checked>
+                                <label class="form-check-label" for="gridRadios1">Global</label>
+                              </div>
+                            <div class="form-check">
+                                <input class="form-check-input" type="radio" name="RadiosLetra" id="RadiosLetra" value="Insensitivo">
+                                <label class="form-check-label" for="gridRadios2">Insensitivo</label>
+                            </div>
+                            <div class="form-check">
+                                <input class="form-check-input" type="radio" name="RadiosLetra" id="RadiosLetra" value="Multilinea" >
+                                <label class="form-check-label" for="gridRadios3">Multilinea</label>
+                            </div>
+                        </div>
+                        <div class="col-6">
+                            <div class="form-group">
+                                <button type="button" id="BotonLetra" class="btn btn-primary">Enviar</button>
+                            </div>
+                            <div class="form-group">
+                                <button class="btn btn-primary" type="reset">Limpiar</button>
+                            </div>
+                        </div>
+                    </div>
+                    <p id="ImpresorLetra"></p>
+                </form>
+            </div>
+            <div class="col-12 col-md-4">
+                <form name="frm_Num">
+                    <div class="form-group">
+                        <label for="TextArea">Encuentra cualquier digito entre 0 a 5</label>
+                        <input type="number" name="num" id="TextAreaNum">
+                    </div>
+                    <div class="row">
+                        <div class="col-6">
+                            <div class="form-check">
+                                <input class="form-check-input" type="radio" name="RadiosNum" id="RadiosNum" value="Global" checked>
+                                <label class="form-check-label" for="gridRadios1">Global</label>
+                              </div>
+                            <div class="form-check">
+                                <input class="form-check-input" type="radio" name="RadiosNum" id="RadiosNum" value="Insensitivo">
+                                <label class="form-check-label" for="gridRadios2">Insensitivo</label>
+                            </div>
+                            <div class="form-check">
+                                <input class="form-check-input" type="radio" name="RadiosNum" id="RadiosNum" value="Multilinea" >
+                                <label class="form-check-label" for="gridRadios3">Multilinea</label>
+                            </div>
+                        </div>
+                        <div class="col-6">
+                            <div class="form-group">
+                                <button type="button" id="BotonNum" class="btn btn-primary">Enviar</button>
+                            </div>
+                            <div class="form-group">
+                                <button class="btn btn-primary" type="reset">Limpiar</button>
+                            </div>
+                        </div>
+                    </div>
+                    <p id="ImpresorNum"></p>
+                </form>
+            </div>
+            <div class="col-12 col-md-4">
+                <form name="frm_NoNum">
+                    <div class="form-group">
+                        <label for="TextArea">No se admite ningún número entre 2 al 6</label>
+                        <input type="number" name="Nonum" id="TextAreaNoNum">
+                    </div>
+                    <div class="row">
+                        <div class="col-6">
+                            <div class="form-check">
+                                <input class="form-check-input" type="radio" name="RadiosNoNum" id="RadiosNoNum" value="Global" checked>
+                                <label class="form-check-label" for="gridRadios1">Global</label>
+                              </div>
+                            <div class="form-check">
+                                <input class="form-check-input" type="radio" name="RadiosNoNum" id="RadiosNoNum" value="Insensitivo">
+                                <label class="form-check-label" for="gridRadios2">Insensitivo</label>
+                            </div>
+                            <div class="form-check">
+                                <input class="form-check-input" type="radio" name="RadiosNoNum" id="RadiosNoNum" value="Multilinea" >
+                                <label class="form-check-label" for="gridRadios3">Multilinea</label>
+                            </div>
+                        </div>
+                        <div class="col-6">
+                            <div class="form-group">
+                                <button type="button" id="BotonNoNum" class="btn btn-primary">Enviar</button>
+                            </div>
+                            <div class="form-group">
+                                <button class="btn btn-primary" type="reset">Limpiar</button>
+                            </div>
+                        </div>
+                    </div>
+                    <p id="ImpresorNoNum"></p>
+                </form>
+            </div>
+            <div class="col-12 col-md-4">
+                <form name="frm_Alter">
+                    <div class="form-group">
+                        <label for="TextArea">Alternancia entre la palabra "pescado" y "carne"</label>
+                        <textarea class="form-control" id="TextAreaAlter" rows="3"></textarea>
+                    </div>
+                    <div class="row">
+                        <div class="col-6">
+                            <div class="form-check">
+                                <input class="form-check-input" type="radio" name="RadiosAlter" id="RadiosAlter" value="Global" checked>
+                                <label class="form-check-label" for="gridRadios1">Global</label>
+                              </div>
+                            <div class="form-check">
+                                <input class="form-check-input" type="radio" name="RadiosAlter" id="RadiosAlter" value="Insensitivo">
+                                <label class="form-check-label" for="gridRadios2">Insensitivo</label>
+                            </div>
+                            <div class="form-check">
+                                <input class="form-check-input" type="radio" name="RadiosAlter" id="RadiosAlter" value="Multilinea" >
+                                <label class="form-check-label" for="gridRadios3">Multilinea</label>
+                            </div>
+                        </div>
+                        <div class="col-6">
+                            <div class="form-group">
+                                <button type="button" id="BotonAlter" class="btn btn-primary">Enviar</button>
+                            </div>
+                            <div class="form-group">
+                                <button class="btn btn-primary" type="reset">Limpiar</button>
+                            </div>
+                        </div>
+                    </div>
+                    <p id="ImpresorAlter"></p>
+                </form>
+            </div>
+            <div class="col-12 col-md-4"></div>
+        </div>
+    </div>
+</body>
+</html>
